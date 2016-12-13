@@ -1,0 +1,12 @@
+{
+  "name": "ng-translate-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:artemhp/ng-translate-sample.git",
+  "author": "Artem Deikun <artem.deikun@zorallabs.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-translate": "^2.13.1"
+  }
+}

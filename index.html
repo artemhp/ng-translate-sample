@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-translate/dist/angular-translate.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-init="count = 2">
+<h2>{{ 'HEADLINE' | translate }}</h2>
+<p translate="SUBSCRIPTION" translate-value-count="{{count}}"></p>
+</body>
+</html>
