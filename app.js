@@ -1,4 +1,4 @@
-angular.module('myApp', ['pascalprecht.translate'])
+angular.module('myApp', ['pascalprecht.translate', 'ui.bootstrap'])
     .config(function ($translateProvider) {
         $translateProvider.translations('en', {
             WELCOME: 'Hey. Welcome to the app!',

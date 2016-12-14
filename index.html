@@ -7,11 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="node_modules/angular-translate/dist/angular-translate.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 </head>
 <body ng-init="count = 2">
-<h2>{{ 'HEADLINE' | translate }}</h2>
+<h1>{{ 'WELCOME' | translate }}</h1>
 <p translate="SUBSCRIPTION" translate-value-count="{{count}}"></p>
+<div>
+    <input class="form-control" type="text" translate translate-attr-placeholder="WELCOME">
+</div>
+<div>
+    <div uib-datepicker  class="well well-sm" datepicker-options="{minDate: new Date()}"></div>
+</div>
 </body>
 </html>
