@@ -12,13 +12,30 @@
     <script src="app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
           integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-<h1 translate="TITLE.WELCOME"></h1>
-<p translate="TITLE.SUBSCRIBE"></p>
 <div>
-    <input type="text" translate-attr-placeholder="Your Email">
-    <button>{{"BUTTON.SUBSCRIBE" | translate}}</button>
+    <h1 translate="TITLE.WELCOME"></h1>
+    <p translate="TITLE.SUBSCRIBE"></p>
+    <p>
+        <input type="text" translate-attr-placeholder="Your Email">
+        <button>{{"BUTTON.SUBSCRIBE" | translate}}</button>
+    </p>
+    <div ng-controller="LangControls as langControls">
+        <button translate="English"
+                ng-click="langControls.changeLanguage('en')"></button>
+        <button translate="Deutsch"
+                ng-click="langControls.changeLanguage('de')"></button>
+    </div>
 </div>
 </body>
 </html>
