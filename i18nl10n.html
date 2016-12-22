@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--https://code.angularjs.org/1.6.0/i18n/-->
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is ib body because of just sample for article -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.0/i18n/angular-locale_uk-ua.js"></script>
+    <script>angular.module('myApp', [])</script>
+    <div ng-app="myApp">
+        {{578793600 | date:'longDate'}} <br />
+        {{2000 | currency}}
+    </div>
+</body>
+</html>

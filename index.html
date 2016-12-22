@@ -12,14 +12,12 @@
     <script src="app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 </head>
-<body ng-init="count = 2">
-<h1>{{ 'INFO.WELCOME' | translate }}</h1>
-<p translate="INFO.SUBSCRIPTION" translate-value-count="{{count}}"></p>
+<body>
+<h1 translate="TITLE.WELCOME"></h1>
+<p translate="TITLE.SUBSCRIBE"></p>
 <div>
-    <input class="form-control" type="text" translate translate-attr-placeholder="INFO.WELCOME">
-</div>
-<div>
-    <div uib-datepicker  class="well well-sm" datepicker-options="{minDate: new Date()}"></div>
+    <input type="text" translate-attr-placeholder="Your Email">
+    <button>{{"BUTTON.SUBSCRIBE" | translate}}</button>
 </div>
 </body>
 </html>

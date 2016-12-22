@@ -1,15 +1,22 @@
 angular.module('myApp', ['pascalprecht.translate', 'ui.bootstrap'])
     .config(function ($translateProvider) {
-        $translateProvider.translations('en', {
-            INFO: {
-                WELCOME: 'Hey. Welcome to the app!',
-                SUBSCRIPTION: 'Today, our product have already signed {{count}} people'
-            }
-        })
+        $translateProvider
+            .translations('en', {
+                'TITLE': {
+                    'SUBSCRIBE': 'Join 1000 other subscribers today.',
+                    'WELCOME': 'Welcome'
+                },
+                'BUTTON': {
+                    'SUBSCRIBE': 'Subscribe'
+                }
+            })
             .translations('de', {
-                INFO: {
-                    WELCOME: 'Hallo. Willkommen in der App',
-                    SUBSCRIPTION: 'Heute haben unser Produkt bereits unterzeichnet {{count}} Personen'
+                'TITLE': {
+                    'SUBSCRIBE': 'Heute 1000 anderen Abonnenten beitreten.',
+                    'WELCOME': 'Willkommen'
+                },
+                'BUTTON': {
+                    'SUBSCRIBE': 'Abonnieren'
                 }
             });
         $translateProvider.preferredLanguage('en');
