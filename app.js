@@ -1,4 +1,4 @@
-angular.module('myApp', ['pascalprecht.translate', 'ui.bootstrap'])
+angular.module('myApp', ['pascalprecht.translate', 'ui.bootstrap', 'ngCookies'])
     .config(function ($translateProvider) {
         $translateProvider
             .translations('en', {
@@ -19,7 +19,14 @@ angular.module('myApp', ['pascalprecht.translate', 'ui.bootstrap'])
                     'SUBSCRIBE': 'Abonnieren'
                 }
             });
-        $translateProvider.preferredLanguage('en');
+
+        $translateProvider.registerAvailableLanguageKeys(['en', 'de'], {
+            'en_*': 'en',
+            'de_*': 'de',
+            '*': 'en'
+        }).determinePreferredLanguage();
+
+        $translateProvider.useCookieStorage();
     });
 
 angular.module('myApp').controller('LangControls', LangControls);

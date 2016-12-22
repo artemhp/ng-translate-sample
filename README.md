@@ -1,0 +1,1 @@
+Source code for article "Localization AngularJS 1.x applications"
